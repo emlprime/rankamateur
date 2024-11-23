@@ -10,7 +10,7 @@ export default function Login(props: RouteSectionProps) {
 
   return (
     <main>
-      <h1>Login</h1>
+      <h1>Login please</h1>
       <form action={loginOrRegister} method="post">
         <input type="hidden" name="redirectTo" value={props.params.redirectTo ?? "/"} />
         <fieldset>
