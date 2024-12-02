@@ -3216,10 +3216,13 @@
         "npm:@solidjs/router@0.15",
         "npm:@solidjs/start@^1.0.10",
         "npm:@types/node@^20.12.7",
+        "npm:@types/pg@^8.11.10",
         "npm:dotenv@^16.4.5",
+        "npm:drizzle-kit@~0.28.1",
         "npm:drizzle-orm@~0.36.4",
         "npm:pg@^8.13.1",
         "npm:solid-js@^1.9.2",
+        "npm:tsx@^4.19.2",
         "npm:unstorage@1.10.2",
         "npm:vinxi@~0.4.3"
       ]

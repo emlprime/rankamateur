@@ -1,12 +1,13 @@
 import { action, query, redirect } from "@solidjs/router";
 import { db } from "./db";
+
 import {
   getSession,
   login,
   logout as logoutSession,
   register,
   validatePassword,
-  validateUsername
+  validateUsername,
 } from "./server";
 
 export const getUser = query(async () => {
@@ -37,7 +38,7 @@ export const loginOrRegister = action(async (formData: FormData) => {
       ? register(username, password)
       : login(username, password));
     const session = await getSession();
-    await session.update(d => {
+    await session.update((d) => {
       d.userId = user.id;
     });
   } catch (err) {

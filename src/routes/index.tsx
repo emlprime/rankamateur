@@ -1,15 +1,17 @@
 import { createAsync, type RouteDefinition } from "@solidjs/router";
-import { getUser, logout } from "~/lib";
-
+import { getUser, logout} from "~/lib";
+import { getCandidate} from "~/lib/getCandidate.ts"
 export const route = {
-  preload() { getUser() }
+  preload() { getUser(); getCandidate() }
 } satisfies RouteDefinition;
 
 export default function Home() {
   const user = createAsync(() => getUser(), { deferStream: true });
+  const candidate = createAsync(() => getCandidate(), { deferStream: true });
   return (
     <main class="w-full p-4 space-y-2">
       <h2 class="font-bold text-3xl">Hello {user()?.username}</h2>
+      <h2 class="font-bold text-3xl">Hello {candidate()?.name}</h2>
       <h3 class="font-bold text-xl">Message board</h3>
       <form action={logout} method="post">
         <button name="logout" type="submit">
@@ -19,5 +21,6 @@ export default function Home() {
     </main>
   );
 }
+
 
 
