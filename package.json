@@ -7,11 +7,17 @@
     "start": "vinxi start"
   },
   "devDependencies": {
-    "@types/node": "^20.12.7"
+    "@types/node": "^20.12.7",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.28.1",
+    "tsx": "^4.19.2"
   },
   "dependencies": {
     "@solidjs/router": "^0.15.0",
     "@solidjs/start": "^1.0.10",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.36.4",
+    "pg": "^8.13.1",
     "solid-js": "^1.9.2",
     "unstorage": "1.10.2",
     "vinxi": "^0.4.3"
